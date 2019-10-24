@@ -27,11 +27,12 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <!-- 自动扫描mapping.xml文件 -->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
     </bean>
     <!--Mapper接口调用方式要用，如果不用mapper接口方式采用实体dao的话，可以不配 接口所在包名，Spring会自动查找其下的类 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.test.mapper" />
+        <property name="basePackage" value="com.qw.dao" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
     <!--采用实体dao调用方式要用， 在dao里可以用注解@Resource(name = "sqlSessionTemplate") 方式得到或用ao继承SqlSessionDaoSupport 再采用setter方式对dao进行注入-->

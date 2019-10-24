@@ -17,7 +17,7 @@
     </settings>
     <!-- 别名 -->
     <typeAliases>
-        <package name="com.login.dao"/>
+        <package name="com.qw.pojo"/>
     </typeAliases>
 
 </configuration>
