@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--mybatis的总配置文件! -->
+    <settings>
+        <!--  配置mybatis的日志  -->
+        <setting name="logImpl" value="LOG4J"/>
+        <!--开启延迟加载  -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--设置不要积极去加载  -->
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!--延迟加载的触发方法  -->
+        <setting name="lazyLoadTriggerMethods" value="clone"/>
+    </settings>
+    <!-- 别名 -->
+    <typeAliases>
+        <package name="com.login.dao"/>
+    </typeAliases>
+
+</configuration>
